@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="containsText"
+    errors="0" failures="0" hostname="" id="" package="containsText" skipped="0"
+    tests="1" time="2.821" timestamp="">
+  
+    <testcase name="Demo test unosquare" classname="containsText" time="2.821" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
