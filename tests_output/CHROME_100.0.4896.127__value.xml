@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="value"
+    errors="0" failures="1" hostname="" id="" package="value" skipped="0"
+    tests="1" time="5.246" timestamp="">
+  
+    <testcase name="demoTest" classname="value" time="5.246" assertions="1">  <failure message="Testing if value of element &lt;form.login input[type=text]&gt; equals &#39;username&#39; in 5000ms - expected &#34;equals &#39;username&#39;&#34; but got: &#34;element could not be located&#34; (5237ms)">    at Object.demoTest (C:\Users\grecia.machaca\Documents\Unosquare\Tests\value.js:2:20)</failure>
+
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       ReferenceError: languageDropdownOpenerSelector is not defined
+       at Object.Google advanced search: Elon Musk (C:\Users\grecia.machaca\Documents\Unosquare\Tests\google\google.js:9:22)
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

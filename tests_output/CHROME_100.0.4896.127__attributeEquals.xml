@@ -5,9 +5,9 @@
 
   <testsuite name="attributeEquals"
     errors="0" failures="0" hostname="" id="" package="attributeEquals" skipped="0"
-    tests="1" time="3.580" timestamp="">
+    tests="1" time="2.323" timestamp="">
   
-    <testcase name="Demo test unosquare" classname="attributeEquals" time="3.580" assertions="3">
+    <testcase name="Demo test unosquare" classname="attributeEquals" time="2.323" assertions="3">
 
     
 
@@ -17,6 +17,11 @@
     </testcase>
   
 
+  
+    <system-err>
+       ReferenceError: languageDropdownOpenerSelector is not defined
+       at Object.Google advanced search: Elon Musk (C:\Users\grecia.machaca\Documents\Unosquare\Tests\google\google.js:9:22)
+    </system-err>
   
 
     

@@ -5,18 +5,23 @@
 
   <testsuite name="assert"
     errors="0" failures="2" hostname="" id="" package="assert" skipped="0"
-    tests="1" time="14.52" timestamp="">
+    tests="1" time="14.44" timestamp="">
   
-    <testcase name="Demo test unosquare" classname="assert" time="14.52" assertions="3">
+    <testcase name="Demo test unosquare" classname="assert" time="14.44" assertions="3">
 
-      <failure message="Testing if element &lt;xxxx&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5241ms)">    at Object.Demo test unosquare (C:\Users\grecia.machaca\Documents\Unosquare\Tests\assert.js:7:15)</failure>
+      <failure message="Testing if element &lt;xxxx&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5222ms)">    at Object.Demo test unosquare (C:\Users\grecia.machaca\Documents\Unosquare\Tests\assert.js:7:15)</failure>
 
-      <failure message="Testing if element &lt;.non_existing&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5238ms)">    at Object.Demo test unosquare (C:\Users\grecia.machaca\Documents\Unosquare\Tests\assert.js:9:15)</failure>
+      <failure message="Testing if element &lt;.non_existing&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5260ms)">    at Object.Demo test unosquare (C:\Users\grecia.machaca\Documents\Unosquare\Tests\assert.js:9:15)</failure>
 
     
     </testcase>
   
 
+  
+    <system-err>
+       ReferenceError: languageDropdownOpenerSelector is not defined
+       at Object.Google advanced search: Elon Musk (C:\Users\grecia.machaca\Documents\Unosquare\Tests\google\google.js:9:22)
+    </system-err>
   
 
     

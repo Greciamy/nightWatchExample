@@ -3,19 +3,11 @@
             failures="0"
             tests="1">
 
-  <testsuite name="containsText"
-    errors="0" failures="0" hostname="" id="" package="containsText" skipped="0"
-    tests="1" time="2.506" timestamp="">
+  <testsuite name="Tests.unosquare"
+    errors="0" failures="0" hostname="" id="" package="unosquare" skipped="0"
+    tests="1" time="2.843" timestamp="">
   
-    <testcase name="Demo test unosquare" classname="containsText" time="2.506" assertions="5">
-
-    
-
-    
-
-    
-
-    
+    <testcase name="Demo test unosquare" classname="Tests.unosquare" time="2.843" assertions="1">
 
     
     </testcase>
