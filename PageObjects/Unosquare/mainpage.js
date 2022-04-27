@@ -1,13 +1,19 @@
 var validateContactUs = {
   contactUnosquare: function(submitBtn) {
+    this.api.pause(1000);
+    const form = getData(); // this is the important part
     return this.waitForElementVisible('@contactusMenu', 1000)
     .click('@contactusMenu')
-    .setValue('@companyTextField', 'QA CoE course')
-    .setValue('@phoneTextField', '3300000000')
-    .setValue('@messageTextArea', 'This is a Random Text used in a Course')
+    .setValue('@companyTextField', form.company)
+    .setValue('@phoneTextField', form.phone)
+    .setValue('@messageTextArea', form.message)
     .click(submitBtn)
     .waitForElementVisible('@nameWarningMsg');
   }
+};
+
+function getData() {
+  return require('../../dataExternal/unosquareForm'); // Using the correct path is important
 };
 
 var validateAboutUs = {
