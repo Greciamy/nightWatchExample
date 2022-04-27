@@ -1,18 +1,29 @@
+var gettingStartedBtn = {
+    gettingStarted: function() {
+        return this.waitForElementVisible('@gettingStartedMenu', 1000)
+            .click('@gettingStartedMenu');
+    }
+};
+
+var searchBtn = {
+    search: function(input, value) {
+        return this.click('@searchField')
+            .setValue(input, value);
+    }
+};
+
+var chooseFirst = {
+    chooseFirstResult: function() {
+        return this.click('@chooseFirstResult')
+    }
+};
 module.exports = {
     url: 'https://nightwatchjs.org/',
-    commands: [{
-        gettingStarted: function() {
-            return this.waitForElementVisible('@gettingStartedMenu', 1000)
-                .click('@gettingStartedMenu');
-        },
-        search: function(input, value) {
-            return this.click('@searchField')
-                .setValue(input, value);
-        },
-        chooseFirstResult: function() {
-            return this.click('@chooseFirstResult')
-        }
-    }],
+    commands: [
+        gettingStartedBtn,
+        searchBtn,
+        chooseFirst
+    ],
     elements: {
         gettingStartedMenu: {
             selector: '#navigation a[href="https://nightwatchjs.org/guide/getting-started/"]'

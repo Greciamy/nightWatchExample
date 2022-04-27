@@ -1,26 +1,38 @@
+var validateContactUs = {
+  contactUnosquare: function(submitBtn) {
+    return this.waitForElementVisible('@contactusMenu', 1000)
+    .click('@contactusMenu')
+    .setValue('@companyTextField', 'QA CoE course')
+    .setValue('@phoneTextField', '3300000000')
+    .setValue('@messageTextArea', 'This is a Random Text used in a Course')
+    .click(submitBtn)
+    .waitForElementVisible('@nameWarningMsg');
+  }
+};
+
+var validateAboutUs = {
+  aboutUnosquare: function() {
+    return this.waitForElementVisible('@aboutMenu', 1000)
+      .click('@aboutMenu');
+  }
+};
+
+var validateBlog = {
+  blogUnosquare: function(searchBtn, value) {
+    return this.waitForElementVisible('@blogMenu', 1000)
+      .click('@blogMenu')
+      .setValue('@searchField', value)
+      .click(searchBtn);
+  }
+};
+
 module.exports = {
     url: 'https://www.unosquare.com',
-    commands: [{
-      aboutUnosquare: function() {
-        return this.waitForElementVisible('@aboutMenu', 1000)
-          .click('@aboutMenu');
-      },
-      contactUnosquare: function(submitBtn) {
-        return this.waitForElementVisible('@contactusMenu', 1000)
-        .click('@contactusMenu')
-        .setValue('@companyTextField', 'QA CoE course')
-        .setValue('@phoneTextField', '3300000000')
-        .setValue('@messageTextArea', 'This is a Random Text used in a Course')
-        .click(submitBtn)
-        .waitForElementVisible('@nameWarningMsg');
-      },
-      blogUnosquare: function(searchBtn, value) {
-        return this.waitForElementVisible('@blogMenu', 1000)
-          .click('@blogMenu')
-          .setValue('@searchField', value)
-          .click(searchBtn);
-      }
-    }],
+    commands: [
+      validateAboutUs,
+      validateContactUs,
+      validateBlog
+    ],
     elements: {
       contactusMenu: {
         selector: "li a[href = '/ContactUs']"
