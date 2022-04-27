@@ -1,6 +1,6 @@
 module.exports = {
-    page_objects_path:[ 'PageObjects/Unosquare','PageObjects/Nightwatch'],
-    skip_testcases_on_fail: false,
+    page_objects_path:['PageObjects/Unosquare'],
+    skip_testcases_on_fail: true,
     src_folders: ['tests'],
 
     webdriver: {

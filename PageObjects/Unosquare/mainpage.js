@@ -1,21 +1,3 @@
-var validateContactUs = {
-  contactUnosquare: function(submitBtn) {
-    this.api.pause(1000);
-    const form = getData(); // this is the important part
-    return this.waitForElementVisible('@contactusMenu', 1000)
-    .click('@contactusMenu')
-    .setValue('@companyTextField', form.company)
-    .setValue('@phoneTextField', form.phone)
-    .setValue('@messageTextArea', form.message)
-    .click(submitBtn)
-    .waitForElementVisible('@nameWarningMsg');
-  }
-};
-
-function getData() {
-  return require('../../dataExternal/unosquareForm'); // Using the correct path is important
-};
-
 var validateAboutUs = {
   aboutUnosquare: function() {
     return this.waitForElementVisible('@aboutMenu', 1000)
@@ -24,20 +6,26 @@ var validateAboutUs = {
 };
 
 var validateBlog = {
-  blogUnosquare: function(searchBtn, value) {
+  blogUnosquare: function() {
     return this.waitForElementVisible('@blogMenu', 1000)
-      .click('@blogMenu')
-      .setValue('@searchField', value)
-      .click(searchBtn);
+      .click('@blogMenu');
   }
 };
+
+var searchBlog = {
+  searchBlogUnosquare: function(value) {  
+      return this.waitForElementVisible('@searchField', 1000)
+      .setValue('@searchField', value.search)
+      .click('@searchBtn');
+  }  
+}
 
 module.exports = {
     url: 'https://www.unosquare.com',
     commands: [
       validateAboutUs,
-      validateContactUs,
-      validateBlog
+      validateBlog,
+      searchBlog
     ],
     elements: {
       contactusMenu: {
@@ -47,7 +35,7 @@ module.exports = {
         selector: "li a[href = '/Industries']"
       },
       aboutMenu: {
-        selector: "li a[href = '/About']"
+        selector: "li a[href = 'https://www.unosquare.com/About']"
       },
       servicesMenu: {
         selector: "li a[href = '/Services']"
@@ -70,6 +58,9 @@ module.exports = {
       },
       searchField: {
         selector: "#search-bar"
+      },
+      searchBtn: {
+        selector: ".search-icon"
       }
     }
 };
